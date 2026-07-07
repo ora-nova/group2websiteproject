@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="../../output.css">
 </head>
 <body>
-         <header class=" fixed top-0 left-0 w-full h-32 z-50 flex items-center justify-between py-2 pr-5 pl-5 mx-auto ">
-        <div class="self-start  mt-4 text-2xl">
+    <div class="absolute top-4 left-5 text-2xl z-50 lg:fixed">
             <p>DE</p>
             <p>EN</p>
         </div>
-          <div class="relative w-60 h-35">
-    <div class="absolute inset-0 lg:hidden bg-white [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
+      <!-- The navigation bar -->
+    <header class=" fixed top-0
+     left-0 w-full h-32 z-60 flex items-center justify-center py-2">
+        
+        <div class="relative w-60 h-35">
+    <div class="absolute inset-0 md:hidden bg-white [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
 
     <h1 class="relative z-10 flex h-full items-center justify-center text-5xl font-semibold">
         Baumeister
     </h1>
 </div>
-          <nav class=" flex justify-end">
+        <nav class=" absolute right-5  ">
 
- <div class=" lg:hidden w-14 h-15 flex items-center justify-center bg-green-800 [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='src/sections/vision.html'">
+ <div class=" lg:hidden w-14 h-15 flex items-center justify-center bg-black [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='src/sections/vision.html'">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                      </svg>
@@ -33,7 +36,6 @@
             <a href="#contact">Contact</a>
 </div>
         </nav>
-        
     </header>
 
   <!-- Imprint section -->
