@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website_project</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 300vh; 
+            background-color: white;
+        }
+
+        .animation-container {
+            position: relative;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            width: 100%;
+            max-width: 3024px;
+            height: 100vh;
+            max-height: 900px;
+            background-color: #ffffff;
+                      
+        }
+
+        .shape {
+            position: absolute;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+            max-height: 90% ;
+        
+        }
+         
+
+        #text-layer {
+            margin-top: 40%;
+        }
+
+        #shape-yellow {
+            min-width: 3cm;
+            min-height: 5cm;
+        }
+
+        /* --- 1. Mobile Styles (Up to 767px) --- */
+        @media (max-width: 767px) {
+            header {
+                height: auto !important;
+                padding: 1rem !important;
+            }
+            header h1 {
+                font-size: 1.5rem !important;
+            }
+            header nav {
+                font-size: 0.875rem !important;
+                line-height: 1.25rem !important;
+            }
+
+            #text-layer {
+                margin-top: 0% !important;
+                font-size: 150% !important;
+                line-height: 2rem !important;
+                max-width: 65% !important;
+                padding: 0 2rem;
+                margin-bottom: 50%; /* Reduced to prevent extreme layout push */
+            }
+
+            .animation-container {
+                top: 60% !important;
+                height: 100vh !important;
+            }
+
+            .animation-container > div {
+                transform: scale(0.9);
+            }
+
+            #pink {
+                right: 15% !important;
+                left: auto !important;
+                top: 10% !important;
+                width: 40%;
+                height: 70%;
+            }
+
+            #shape-yellow {
+                position: absolute !important;
+                top: 10% !important;
+                left: 0px !important;
+                height: 90%;
+                width: 70%;
+            }
+
+            #shape-teal {
+                top: 16% !important;
+                width: 55% !important;
+                left: 10% !important;
+            }
+
+            #shape-blue {
+                left: 45% !important;
+                top: 18% !important;
+                width: 55% !important;
+            }
+
+            #shape-red {
+                left: 15% !important;
+                top: 30% !important;
+                width: 73%;
+                height: 50%;
+            }
+
+            #secgreen {
+                margin-top: -55%; /* Fixed extreme clipping */
+                height: auto;
+                width: 40%;
+                left: 62%;
+            }
+        }
+
+        /* --- 2. Standard iPad / Tablet Styles (768px to 1024px) --- */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #text-layer {
+                margin-top: 10% !important;
+                font-size: 2.5rem !important;
+            }
+            .animation-container {
+                top: 65% !important;
+            }
+            #shape-blue {
+                left: 40% !important;
+                top: 15% !important;
+                width: 45% !important;
+            }
+            #pink {
+                left: 35% !important;
+                width: 45% !important;
+            }
+        }
+
+        /* --- 3. iPad Pro / Laptop Styles (1025px to 1668px) --- */
+        @media (min-width: 1025px) and (max-width: 1668px) {
+            #shape-blue {
+                left: 43% !important;
+                top: 21% !important;
+                width: 55% !important;
+                height: 20%;
+            }
+            #pink {
+                margin-left: 29% !important;
+                top: 10% !important;
+                width: 60%;
+                height: 95%;
+            }
+            
+        }
+        @media (min-width: 1024px) and (max-width: 1024px){
+             #pink {
+                margin-left: 20% !important;
+                top: 3% !important;
+                width: 60%;
+                height: 95%;
+            }
+             #shape-teal {
+                top: 16% !important;
+                width: 45% !important;
+                height:40%;
+                left: 10% !important;
+            }
+            #shape-red {
+                left: 15% !important;
+                top: 55% !important;
+                width: 63%;
+                height: 30%;
+            }
+              #secgreen {
+                margin-top: -18%; /* Fixed extreme clipping */
+                height: auto;
+                width: 40%;
+                left: 61%;
+            }
+            #text-layer{
+                display: none;
+            }
+        }
+    </style>
+  </head>
+  <body class="w-full">
+     <!-- The navigation bar -->
+    <header class=" fixed top-0
+     left-0 w-full h-32 z-60 flex items-center justify-between py-2 pr-5 pl-5 mx-auto ">
+        <div class="self-start  mt-4 text-2xl">
+            <p>DE</p>
+            <p>EN</p>
+        </div>
+        <div class="relative w-40 h-25">
+    <div class="absolute inset-0 md:hidden bg-white [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
+
+    <h1 class="relative z-10 flex h-full items-center justify-center text-5xl font-semibold">
+        Baumeister
+    </h1>
+</div>
+        <nav class=" flex justify-end">
+
+ <div class=" lg:hidden w-14 h-15 flex items-center justify-center bg-black [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='menupage.html'">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                     </svg>
+             </div>
+<div class="hidden lg:flex flex-col  text-2xl  text-right">
+            <a href="#about-us">About</a>
+            <a href="#services">Services</a>
+            <a href="#references">References</a>
+            <a href="#contact">Contact</a>
+</div>
+        </nav>
+    </header>
+<div id="wrapper-bg-view">
+<div class="relative w-full h-screen">
+        <div class="absolute z-999 h-screen inset-0 flex justify-center items-center font-semibold text-white pointer-events-none">
+            <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%] leading-10 pointer-events-auto">
+                We help you set focus and gain impact. By adding to the conversation, not to the noise. 
+            </h1>
+        </div>
+
+        <div class="animation-container">
+            <div id="pink" class="shape absolute top-[15%]   left-[15%] w-auto" >
+                <img src="/Vector.png" alt="pink-images">
+            </div>
+
+            <div id="shape-yellow" class="shape z-8">
+                <img src="/yellow.png" alt="yellow">
+            </div>
+
+            <div id="shape-teal" class="shape absolute top-[22%] left-[19%] w-[55%] z-10">
+                <img src="/stgreen.png" alt="teal-shape">
+            </div>
+
+            <div id="shape-red" class="shape absolute top-[70%] left-[10%] z-8">
+                <img src="/sfa.png" alt="red-image">
+            </div>
+
+            <div id="shape-blue" class="shape absolute top-[15%] left-[45%] w-[37%] z-10">
+                <img src="/Blue.png" alt="blue-image-icon">
+            </div>
+
+            <div id="secgreen" class="shape absolute top-[50%] right-0">
+                <img src="/secgreen.png" alt="secondary-green"> 
+            </div>
+        </div>
+    </div>
+  </div>
+
+<div id="about-us">
+        <p class="font-normal text-[48px] w-[80%] mt-20 md:mt-60 lg:mt-180 mx-auto">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
+        </div>
+<div class="relative">
+        <div class="sticky top-0 z-50 mt-30">
+        <div class="ml-28 md:ml-70 lg:ml-124 w-59 h-35 bg-yellow-300 [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] "></div>
+        </div>
+
+        <div id="services">
+ <div class="flex flex-col  lg:flex-row justify-center gap-12 w-[80%] mx-auto mt-30 mb-30 ">
+  <div class="font-medium text-[48px] flex flex-col  gap-8">
+  <p>Brand strategy</p>
+  <p>Corporate Identity & Website development</p>
+  <p>SEO & copywriting</p>
+  <p>Media Relations</p>
+  <p>Digital marketing &content production</p>
+  <p>Influencer relations</p>
+</div>
+ <div class="w-100 h-130 md:w-110 md:h-130  lg:h-140 lg:w-150 bg-green-800 [clip-path:polygon(32%_5%,63%_0%,96%_19%,96%_71%,70%_100%,24%_95%,16%_67%,7%_31%)] mt-20">
+  <p class="p-13 ml-10   md:p-15  md:ml-20 mr-10 lg:p-14 lg:ml-10 text-sm font-medium text-white mt-17">Our strategic approach is a collaborative journey that starts with analysing the initial situation and leads to a message that cut through the information overload we take care of content production and mantain relationships with multipliers to position your brand in best possible way. From analysis to implementation, we accompany you every steps of the way, ensuring that every measure is effective.</p>
+ </div>
+
+</div>
+</div>
+
+  <div id="references" class=" bg-yellow-300 mx-auto  p-35 
+            [clip-path:polygon(0%_0%,100%_0%,100%_97%,29%_100%,0%_99%)]">
+            <ul class="text-right mb-30 font-normal text-2xl">
+           <li><a href="https://acehotel.com/">Ace Hotel</a></li>
+  <li><a href="https://www.armed/angels.com">ARMEDANGELS</a></li>
+  <li><a href="figma.com/exit?url=https%3A%2F%2Fberlindesignweek.com%2F">BERLIN DESIGN WEEK</a></li>
+  <li><a href="https://www.figma.com/exit?url=https%3A%2F%2Fberlinerberg.com%2F">Berlin Berg</a></li>
+  <li><a href="https://www.instagram.com/biteclubberlin/?hl=de">BITE CLUB</a></li>
+  <li><a href="https://budweiserbudvar.com/de/#">Budweiser Budvar</a></li>
+  <li><a href="https://www.instagram.com/chungkingnoodles/?hl=de">ChungKing Noodles</a></li>
+  <li><a href="https://designpreis-brandenburg.de/">Designpreis Brandenburg</a></li>
+  <li><a href="https://www.instagram.com/biteclubberlin/?hl=de">Die Techniker</a></li>
+  <li><a href="https://budweiserbudvar.com/?redirect_from=de&redirect_code=3">Europen Streat Food Awards</a></li>
+  <li><a href="https://www.grundmann-dentistry.de/"></a>Grundmann Dentistry</li>
+  <li><a href="https://www.hornbach.de/werkstueck-edition/">HORNBACK Werkstuck</a></li>
+  <li><a href="https://www.hornbach.de/nachhaltigkeit/hornbach-macht-schule/">HORNBACK macht schule</a></li>
+  <li><a href="https://ifdesign.com/de/">iF Design</a></li>
+  <li><a href="https://kopka.berlin/">Kopka</a></li>
+   <li><a href="https://klh-massschuhe.com/de">KLH MaBschuhe</a></li> 
+  <li><a href="https://www.lode-stijn.de/">Lode& Stijn</a></li>
+  <li><a href="https://luya.bio/">Luya</a></li>
+  <li><a href="https://www.meissen.com/net/">MEISSEN</a></li>
+  <li><a href="https://www.motelminibar.com/">Motel Beer & Coffee</a></li>
+
+  <li><a href="https://www.paperandtea.de/">PAPER & TEA</a></li>
+  <li><a href="https://www.rocketandbasil.com/">rocket & basil</a></li>
+  <li><a href="https://gruppe.seeberger.de/de/">Seeberger Gruppe</a></li>
+  <li><a href="https://shioriberlin.com/">Shiori</a></li>
+  <li><a href="https://www.verfassungsschutz.de/SharedDocs/publikationen/DE/wirtschafts-wissenschaftsschutz/2023-03-23-spoc-magazin.html">SPOC Magazin</a></li>
+  <li><a href="https://www.stocubo.de/de/">stocubo</a></li>
+  <li><a href="https://sturcookware.de/">STUR</a></li>
+  <li><a href="https://www.worldofcoffee.org/">World of coffee</a></li>
+  <li><a href="https://yamo.bio/lander">yamo</a></li>
+
+            </ul>
+</div>
+</div>
+
+
+<div id="contact">
+ <div class="w-120 h-120 mx-auto bg-red-600 [clip-path:polygon(15%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] z-20 "></div>
+    <footer class="flex  text-black flex-col lg:hidden gap-20 justify-center font-medium text-lg  mt-5">
+    <div class="flex flex-col gap-6 ml-12 md:flex-row md:gap-62 md:ml-15 ">
+  <p>Agentur Baumeister<br>
+  BockhstraBe 13
+<br>10967 Berlin</p>
+<P><a href="https://www.figma.com/proto/vT0RgmKtHmisEhSzxW3PW9/Baumeister----Exercise?node-id=3001-3&p=f&t=0ik18q0jjPR8gndj-0&scaling=min-zoom&content-scaling=fixed&page-id=3001%3A2c" class="underline">hallo@agentur-baumeister.com</a><br>+49(0)30 - 490 827 87</P>
+  </div>
+<div class="flex gap-10 ml-12 md:gap-28 md:ml-15">
+<a href="index.html">datenschutz</a>
+<a href="imprnt.html">Impressum</a>
+<p>LinkedIn</p>
+<p>Instagram</p>
+
+  </div>
+</footer>
+<footer class="hidden lg:flex  gap-25 text-black font-medium text-2xl ml-5 mr-5">
+
+    <div class="flex flex-col gap-2">
+        <p>Agentur Baumeister</p>
+        <p>BockhstraBe 13</p>
+        <p>10967 Berlin</p>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <a href="#" class="underline">hallo@agentur-baumeister.com</a>
+        <p>+49(0)30 - 490 827 87</p>
+    </div>
+
+    <div class="flex gap-14">
+        <p>LinkedIn</p>
+        <p>Instagram</p>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <a href="imprnt.html">Impressum</a>
+        <a href="index.html">Datenschutz</a>
+    </div>
+
+</footer>
+</div>
+
+   <script>
+        const yellow = document.getElementById('shape-yellow');
+        const teal = document.getElementById('shape-teal');
+        const text = document.getElementById('text-layer');
+        const red = document.getElementById('shape-red');
+        const blue = document.getElementById('shape-blue');
+
+        window.addEventListener('scroll', () => {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            if (maxScroll <= 0) return;
+            
+            const scrollPercent = window.scrollY / maxScroll;
+            const progress = Math.min(scrollPercent * 2, 1);
+
+            yellow.style.transform = `translate(${progress * 50}px, ${progress * 250}px)`;
+            teal.style.transform = `translate(${progress * -80}px, ${progress * 412}px)`;
+            red.style.transform = `translate(${progress * -30}px, ${progress * 250}px)`;
+            blue.style.transform = `translate(${progress * -70}px, ${progress * 250}px)`;
+            text.style.transform = `translateY(${(progress + 1) * 50}px)`;
+        });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

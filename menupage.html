@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Document</title>
+ <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 300vh; 
+            background-color: white;
+        }
+
+        .animation-container {
+            position: relative;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            width: 100%;
+            max-width: 3024px;
+            height: 100vh;
+            max-height: 900px;
+            background-color: #ffffff;
+                      
+        }
+
+        .shape {
+            position: absolute;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+            max-height: 90% ;
+        
+        }
+         
+
+        #text-layer {
+            margin-top: 40%;
+        }
+
+        #shape-yellow {
+            min-width: 3cm;
+            min-height: 5cm;
+        }
+
+        /* --- 1. Mobile Styles (Up to 767px) --- */
+        @media (max-width: 767px) {
+            header {
+                height: auto !important;
+                padding: 1rem !important;
+            }
+            header h1 {
+                font-size: 1.5rem !important;
+            }
+            header nav {
+                font-size: 0.875rem !important;
+                line-height: 1.25rem !important;
+            }
+
+            #text-layer {
+                margin-top: 0% !important;
+                font-size: 150% !important;
+                line-height: 2rem !important;
+                max-width: 65% !important;
+                padding: 0 2rem;
+                margin-bottom: 50%; /* Reduced to prevent extreme layout push */
+            }
+
+            .animation-container {
+                top: 60% !important;
+                height: 100vh !important;
+            }
+
+            .animation-container > div {
+                transform: scale(0.9);
+            }
+
+            #pink {
+                right: 15% !important;
+                left: auto !important;
+                top: 10% !important;
+                width: 40%;
+                height: 70%;
+            }
+
+            #shape-yellow {
+                position: absolute !important;
+                top: 10% !important;
+                left: 0px !important;
+                height: 90%;
+                width: 70%;
+            }
+
+            #shape-teal {
+                top: 16% !important;
+                width: 55% !important;
+                left: 10% !important;
+            }
+
+            #shape-blue {
+                left: 45% !important;
+                top: 18% !important;
+                width: 55% !important;
+            }
+
+            #shape-red {
+                left: 15% !important;
+                top: 30% !important;
+                width: 73%;
+                height: 50%;
+            }
+
+            #secgreen {
+                margin-top: -55%; /* Fixed extreme clipping */
+                height: auto;
+                width: 40%;
+                left: 62%;
+            }
+        }
+
+        /* --- 2. Standard iPad / Tablet Styles (768px to 1024px) --- */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #text-layer {
+                margin-top: 10% !important;
+                font-size: 2.5rem !important;
+            }
+            .animation-container {
+                top: 65% !important;
+            }
+            #shape-blue {
+                left: 40% !important;
+                top: 15% !important;
+                width: 45% !important;
+            }
+            #pink {
+                left: 35% !important;
+                width: 45% !important;
+            }
+        }
+
+        /* --- 3. iPad Pro / Laptop Styles (1025px to 1668px) --- */
+        @media (min-width: 1025px) and (max-width: 1668px) {
+            #shape-blue {
+                left: 43% !important;
+                top: 21% !important;
+                width: 55% !important;
+                height: 20%;
+            }
+            #pink {
+                margin-left: 29% !important;
+                top: 10% !important;
+                width: 60%;
+                height: 95%;
+            }
+            
+        }
+        @media (min-width: 1024px) and (max-width: 1024px){
+             #pink {
+                margin-left: 20% !important;
+                top: 3% !important;
+                width: 60%;
+                height: 95%;
+            }
+             #shape-teal {
+                top: 16% !important;
+                width: 45% !important;
+                height:40%;
+                left: 10% !important;
+            }
+            #shape-red {
+                left: 15% !important;
+                top: 55% !important;
+                width: 63%;
+                height: 30%;
+            }
+              #secgreen {
+                margin-top: -18%; /* Fixed extreme clipping */
+                height: auto;
+                width: 40%;
+                left: 61%;
+            }
+            #text-layer{
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="absolute top-10 left-5 text-2xl z-50 md:fixed">
+            <p>DE</p>
+            <p>EN</p>
+        </div>
+      <!-- The navigation bar -->
+    <header class=" fixed top-0
+     left-0 w-full h-32 z-60 flex items-center justify-center py-2">
+        
+        <div class="relative w-40 h-25">
+    <div class="absolute inset-0 md:hidden bg-white [clip-path:polygon(83%_29%,96%_36%,100%_49%,91%_66%,15%_72%,0%_58%,3%_39%)]"></div>
+
+    <h1 class="relative z-10 flex h-full items-center justify-center text-5xl font-semibold">
+        Baumeister
+    </h1>
+</div>
+        <nav class=" absolute right-5  ">
+
+ <div class=" lg:hidden w-14 h-15 flex items-center justify-center bg-black [clip-path:polygon(16%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] " onclick="window.location.href='main.html'">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+             </div>
+<div class="hidden lg:flex flex-col  text-2xl  text-right">
+            <a href="main.html#about-us">About</a>
+            <a href="main.html#services">Services</a>
+            <a href="main.html#references">References</a>
+            <a href="#contact">Contact</a>
+</div>
+        </nav>
+    </header>
+</div>
+    <div class="flex  items-center justify-center flex-col text-green-600 text-4xl gap-12 font-bold pt-32">
+         <a href="main.html#about-us" >About</a>
+            <a href="main.html#services">Services</a>
+            <a href="main.html#references">References</a>
+            <a href="main.html#contact">Contact</a>
+            </div>
+
+            <div class="relative w-full h-screen">
+        <div class="absolute z-999 h-screen inset-0 flex justify-center items-center font-semibold text-white pointer-events-none">
+            <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%] leading-10 pointer-events-auto">
+                We help you set focus and gain impact. By adding to the conversation, not to the noise. 
+            </h1>
+        </div>
+
+        <div class="animation-container">
+            <div id="pink" class="shape absolute top-[15%]   left-[15%] w-auto" >
+                <img src="/Vector.png" alt="pink-images">
+            </div>
+
+            <div id="shape-yellow" class="shape z-8">
+                <img src="/yellow.png" alt="yellow">
+            </div>
+
+            <div id="shape-teal" class="shape absolute top-[22%] left-[19%] w-[55%] z-10">
+                <img src="/stgreen.png" alt="teal-shape">
+            </div>
+
+            <div id="shape-red" class="shape absolute top-[70%] left-[10%] z-8">
+                <img src="/sfa.png" alt="red-image">
+            </div>
+
+            <div id="shape-blue" class="shape absolute top-[15%] left-[45%] w-[37%] z-10">
+                <img src="/Blue.png" alt="blue-image-icon">
+            </div>
+
+            <div id="secgreen" class="shape absolute top-[50%] right-0">
+                <img src="/secgreen.png" alt="secondary-green"> 
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const yellow = document.getElementById('shape-yellow');
+        const teal = document.getElementById('shape-teal');
+        const text = document.getElementById('text-layer');
+        const red = document.getElementById('shape-red');
+        const blue = document.getElementById('shape-blue');
+
+        window.addEventListener('scroll', () => {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            if (maxScroll <= 0) return;
+            
+            const scrollPercent = window.scrollY / maxScroll;
+            const progress = Math.min(scrollPercent * 2, 1);
+
+            yellow.style.transform = `translate(${progress * 50}px, ${progress * 250}px)`;
+            teal.style.transform = `translate(${progress * -80}px, ${progress * 412}px)`;
+            red.style.transform = `translate(${progress * -30}px, ${progress * 250}px)`;
+            blue.style.transform = `translate(${progress * -70}px, ${progress * 250}px)`;
+            text.style.transform = `translateY(${(progress + 1) * 50}px)`;
+        });
+    </script>
+     <script type="module" src="/src/main.js"></script>
+</body>
+</html>
