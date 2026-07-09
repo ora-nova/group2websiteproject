@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>website_project</title>
     <style>
-        body {
+        #wrapper-bg-view {
             margin: 0;
             padding: 0;
             height: 300vh; 
             background-color: white;
+            overflow-x: hidden;
         }
 
         .animation-container {
@@ -186,7 +187,7 @@
         }
     </style>
   </head>
-  <body class="min-w-full">
+  <body class="w-full">
      <!-- The navigation bar -->
     <header class=" fixed top-0
      left-0 w-full h-32 z-60 flex items-center justify-between py-2 pr-5 pl-5 mx-auto ">
@@ -225,7 +226,7 @@
         </div>
 
         <div class="animation-container">
-            <div id="pink" class="shape absolute top-[15%]   left-[15%] w-auto" >
+            <div id="pink" class="shape absolute top-[15%]   left-[15%] w-full h-auto" >
                 <img src="/Vector.png" alt="pink-images">
             </div>
 
@@ -253,7 +254,7 @@
   </div>
 
 <div id="about-us">
-        <p class="font-normal text-[48px] w-[80%] mt-20 md:mt-70 lg:mt-180 mx-auto">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
+        <p class="font-normal text-[48px] w-[80%] mt-5 md:mt-70 lg:mt-180 mx-auto">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
         </div>
 <div class="relative">
         <div class="sticky top-0 z-50 mt-30">
@@ -317,7 +318,7 @@
 
 
 <div id="contact">
- <div class="w-120 h-120 mx-auto bg-red-600 [clip-path:polygon(15%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] z-20 "></div>
+ <div class="w-80 h-80 md:w-120 md:h-120 mx-auto bg-red-600 [clip-path:polygon(15%_28%,75%_21%,100%_51%,79%_78%,26%_72%,13%_50%)] z-20 "></div>
     <footer class="flex  text-black flex-col lg:hidden gap-20 justify-center font-medium text-lg  mt-5">
     <div class="flex flex-col gap-6 ml-12 md:flex-row md:gap-62 md:ml-15 ">
   <p>Agentur Baumeister<br>
