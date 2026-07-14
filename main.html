@@ -25,7 +25,7 @@
             height: 100vh;
             max-height: 900px;
             background-color: #ffffff;
-                      
+            z-index: 0; /* Higher z-index allows it to scroll over the sticky navbar */
         }
 
         .shape {
@@ -33,9 +33,8 @@
             transition: transform 0.1s ease-out;
             will-change: transform;
             max-height: 90% ;
-        
+            transform-origin: left center; 
         }
-         
 
         #text-layer {
             margin-top: 40%;
@@ -46,7 +45,7 @@
             min-height: 5cm;
         }
 
-        /* --- 1. Mobile Styles (Up to 767px) --- */
+        /* --- 1. Mobile / iPhone Styles (Up to 767px) --- */
         @media (max-width: 767px) {
             header {
                 height: auto !important;
@@ -62,87 +61,135 @@
 
             #text-layer {
                 margin-top: 0% !important;
-                font-size: 150% !important;
-                line-height: 2rem !important;
-                max-width: 65% !important;
-                padding: 0 2rem;
-                margin-bottom: 50%; /* Reduced to prevent extreme layout push */
+                font-size: 1.5rem !important;
+                line-height: 2.2rem !important;
+                max-width: 80% !important;
+                width: 80% !important;
+                padding: 0;
+                text-align: center;
+                display: block !important;
             }
 
             .animation-container {
-                top: 60% !important;
-                height: 100vh !important;
-            }
-
-            .animation-container > div {
-                transform: scale(0.9);
-            }
-
-            #pink {
-                right: 15% !important;
-                left: auto !important;
-                top: 10% !important;
-                width: 40%;
-                height: 70%;
+                top: 55% !important;
+                height: 80vh !important;
             }
 
             #shape-yellow {
                 position: absolute !important;
-                top: 10% !important;
-                left: 0px !important;
-                height: 90%;
-                width: 70%;
+                top: 5% !important;
+                left: 10% !important;
+                width: 75% !important;
+                height: auto !important;
+                z-index: 5 !important;
             }
 
             #shape-teal {
-                top: 16% !important;
-                width: 55% !important;
-                left: 10% !important;
+                top: 18% !important;
+                left: -5% !important;
+                width: 60% !important;
+                height: auto !important;
+                z-index: 10 !important;
             }
 
             #shape-blue {
-                left: 45% !important;
-                top: 18% !important;
-                width: 55% !important;
+                left: 40% !important;
+                top: 22% !important;
+                width: 58% !important;
+                height: auto !important;
+                z-index: 10 !important;
             }
 
             #shape-red {
                 left: 15% !important;
-                top: 30% !important;
-                width: 73%;
-                height: 50%;
+                top: 48% !important;
+                width: 75% !important;
+                height: auto !important;
+                z-index: 20 !important; 
+            }
+
+            #pink {
+                left: auto !important;
+                right: 10% !important;
+                top: 8% !important;
+                width: 20% !important;
+                height: auto !important;
+                z-index: 4 !important;
             }
 
             #secgreen {
-                margin-top: -55%; /* Fixed extreme clipping */
-                height: auto;
-                width: 40%;
-                left: 62%;
+                margin-top: 0% !important;
+                top: 32% !important;
+                left: 75% !important;
+                width: 30% !important;
+                height: auto !important;
+                z-index: 6 !important;
             }
         }
 
-        /* --- 2. Standard iPad / Tablet Styles (768px to 1024px) --- */
+        /* --- 2. iPad / Tablet Specific Layout (768px to 1024px) --- */
         @media (min-width: 768px) and (max-width: 1024px) {
-            #text-layer {
-                margin-top: 10% !important;
-                font-size: 2.5rem !important;
+            .animation-container{
+    width:100vw !important;
+    left:50%;
+     top: 55% !important;
+    transform:translate(-50%,-55%);
+}
+
+            #shape-yellow {
+                position: absolute !important;
+                top: 5% !important;
+                 left: 8% !important;
+    width: 65% !important;
+                height: auto !important;
             }
-            .animation-container {
-                top: 65% !important;
+
+            #shape-teal {
+                top: 18% !important;
+                  left: -5% !important;
+    width: 55% !important;
+                height: auto !important;
             }
+
             #shape-blue {
-                left: 40% !important;
-                top: 15% !important;
-                width: 45% !important;
+            
+                top: 22% !important;
+                 left: 40% !important;
+    width: 55% !important;
             }
+
+            #shape-red {
+                 left: 10% !important;
+    width: 72% !important;
+                top: 52% !important;
+               
+                height: auto !important;
+            }
+
             #pink {
-                left: 35% !important;
-                width: 45% !important;
+                left: 60% !important;
+                right: auto !important;
+                top: 8% !important;
+                width: 15% !important;
+                height: auto !important;
+            }
+
+            #secgreen {
+                top: 35% !important;
+                  left: auto !important;
+                width: 25% !important;
+                height: auto !important;
+            }
+
+            #text-layer {
+                display: none !important;
             }
         }
-
-        /* --- 3. iPad Pro / Laptop Styles (1025px to 1668px) --- */
+        /* --- 3. Large Laptop Styles (1025px to 1668px) --- */
         @media (min-width: 1025px) and (max-width: 1668px) {
+            .animation-container{
+                top: 77% !important;
+            }
             #shape-blue {
                 left: 43% !important;
                 top: 21% !important;
@@ -154,36 +201,6 @@
                 top: 10% !important;
                 width: 60%;
                 height: 95%;
-            }
-            
-        }
-        @media (min-width: 1024px) and (max-width: 1024px){
-             #pink {
-                margin-left: 20% !important;
-                top: 3% !important;
-                width: 60%;
-                height: 95%;
-            }
-             #shape-teal {
-                top: 16% !important;
-                width: 45% !important;
-                height:40%;
-                left: 10% !important;
-            }
-            #shape-red {
-                left: 15% !important;
-                top: 55% !important;
-                width: 63%;
-                height: 30%;
-            }
-              #secgreen {
-                margin-top: -18%; /* Fixed extreme clipping */
-                height: auto;
-                width: 40%;
-                left: 61%;
-            }
-            #text-layer{
-                display: none;
             }
         }
     </style>
@@ -220,14 +237,15 @@
     </header>
 <div id="wrapper-bg-view">
 <div class="relative w-full h-screen">
-        <div class="absolute z-999 h-screen inset-0 flex justify-center items-center font-semibold text-white pointer-events-none">
+        <!-- Kept the main intro text above the sliding layers -->
+        <div class="absolute z-[999] h-screen inset-0 flex justify-center items-center font-semibold text-white pointer-events-none">
             <h1 id="text-layer" class="text-center text-4xl max-w-auto md:w-[30%] leading-10 pointer-events-auto">
                 We help you set focus and gain impact. By adding to the conversation, not to the noise. 
             </h1>
         </div>
 
         <div class="animation-container">
-            <div id="pink" class="shape absolute top-[15%]   left-[15%] w-full h-auto" >
+            <div id="pink" class="shape absolute top-[15%] left-[15%]">
                 <img src="/Vector.png" alt="pink-images">
             </div>
 
@@ -252,8 +270,7 @@
             </div>
         </div>
     </div>
-  </div>
-
+</div>
 <div id="about-us">
         <p class="font-normal text-[48px] w-[80%] mt-15  mx-auto">We are a Berlin-based communications agency specialising in helping companies and brands find their voice and position themselves. Whether it's brand building,identity sharpening,or communication strategy, we bring a fresh perspective to established structures, develop tailor-made communication solutions, and ensure that message resonate. with over decade of experience, we have honed our skills in giving brands their unmistakable identity and making them visible in the long term.</p>
         </div>
@@ -362,26 +379,41 @@
 </div>
 
    <script>
+        const pink = document.getElementById('pink');
         const yellow = document.getElementById('shape-yellow');
         const teal = document.getElementById('shape-teal');
-        const text = document.getElementById('text-layer');
         const red = document.getElementById('shape-red');
         const blue = document.getElementById('shape-blue');
 
         window.addEventListener('scroll', () => {
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            if (maxScroll <= 0) return;
-            
-            const scrollPercent = window.scrollY / maxScroll;
-            const progress = Math.min(scrollPercent * 2, 1);
+            const maxScroll = window.innerHeight * 1.5;
+            const scrollPercent = Math.min(window.scrollY / maxScroll, 1);
+            const baseProgress = Math.min(scrollPercent * 2, 1);
 
-            yellow.style.transform = `translate(${progress * 50}px, ${progress * 250}px)`;
-            teal.style.transform = `translate(${progress * -80}px, ${progress * 412}px)`;
-            red.style.transform = `translate(${progress * -30}px, ${progress * 250}px)`;
-            blue.style.transform = `translate(${progress * -70}px, ${progress * 250}px)`;
-            text.style.transform = `translateY(${(progress + 1) * 50}px)`;
+            let horizontalScale = 1;
+            if (scrollPercent > 0.5) {
+                const scaleProgress = (scrollPercent - 0.5) / 0.5;
+                horizontalScale = 1 + (scaleProgress * 0.55); 
+            }
+
+            const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1024;
+            const isMobile = window.innerWidth < 768;
+
+            let scalar = 1.0;
+            if (isTablet) {
+                scalar = 0.45;
+            } else if (isMobile) {
+                scalar = 0.3;
+            }
+
+            pink.style.transform = `translate(${baseProgress * 40 * scalar}px, ${baseProgress * 180 * scalar}px)`;
+            yellow.style.transform = `translate(${baseProgress * 50 * scalar}px, ${baseProgress * 250 * scalar}px)`;
+            teal.style.transform = `translate(${baseProgress * -80 * scalar}px, ${baseProgress * 412 * scalar}px) scaleX(${horizontalScale})`;
+            red.style.transform = `translate(${baseProgress * -30 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
+            blue.style.transform = `translate(${baseProgress * -70 * scalar}px, ${baseProgress * 250 * scalar}px) scaleX(${horizontalScale})`;
         });
     </script>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
